@@ -1,0 +1,9 @@
+from 
+https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-console-train-evaluate-models.html
+
+def reward_function(params):
+    if not params["all_wheels_on_track"]:
+        reward = -1
+    else:
+        reward = params["progress"]
+    return reward
